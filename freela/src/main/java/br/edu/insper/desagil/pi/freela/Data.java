@@ -47,8 +47,8 @@ public class Data extends Momento {
             }
             ano = ajusta(novoAno, 1970, 2070);
         }
-        if (novoMes > 1) {
-            if (novoAno < 12) {
+        if (novoMes >= 1) {
+            if (novoAno <= 12) {
                 mes = novoMes;
             }
             mes = ajusta(mes, 1, 12);
@@ -71,7 +71,7 @@ public class Data extends Momento {
             contagemDias += limite.get(i);
         }
         int totalDias = dias + (contagemDias - limite.get(getMes())) + getDia();
-
         return totalDias*24*60;
+
     }
 }

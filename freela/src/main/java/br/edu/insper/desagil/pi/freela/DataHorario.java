@@ -48,6 +48,6 @@ public class DataHorario extends Momento {
     public int minutos(){
         return ((data.minutos()/60)/24) * getHora()*getMinuto();
     }
-    
+
 
 }
